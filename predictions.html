@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Occupancy Predictor | Pattern Lab</title>
+    <link rel="stylesheet" href="prediction-style.css">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>Classroom <span class="accent">KNN</span> Predictor</h1>
+            <p>Modeling student behavior using social anxiety & distance vectors.</p>
+        </header>
+
+        <div class="main-layout">
+            <div class="simulation-box">
+                <div class="professor-area">LECTURE STAGE / DOOR</div>
+                <div id="classroom" class="grid-grid"></div>
+                <div class="controls">
+                    
+                    <button class="primary-btn" onclick="startPrediction()">Run KNN Simulation</button>
+<button class="secondary-btn" onclick="resetSim()">Clear Data</button>
+<button id="download-btn" class="secondary-btn" style="background: #a6c1ee; color: #0f172a;" onclick="downloadReport()" disabled>Download Data Report</button>
+                </div>
+            </div>
+
+            <aside class="metrics-panel">
+                <h3>Live ML Metrics</h3>
+                <div class="metric">
+                    <label>Back-Bench Bias</label>
+                    <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+                </div>
+                <div class="metric">
+                    <label>Social Anxiety Coefficient</label>
+                    <div class="bar"><div class="fill" style="width: 62%;"></div></div>
+                </div>
+                <div class="log-container">
+                    <h4>Decision Log:</h4>
+                    <ul id="log">
+                        <li>System ready...</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="prediction-script.js"></script>
+</body>
+</html>
